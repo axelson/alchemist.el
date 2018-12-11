@@ -17,7 +17,7 @@ defmodule Alchemist.Helpers.Complete do
 
   def run(exp) do
     code = case is_bitstring(exp) do
-             true -> exp |> String.to_char_list
+             true -> exp |> String.to_charlist()
              _ -> exp
            end
 

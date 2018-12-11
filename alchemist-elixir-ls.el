@@ -44,13 +44,15 @@
                          (alchemist--lsp-server-path-for-current-project))
 
 (defun alchemist--lsp-server-path-for-current-project ()
-  `(,(concat alchemist-server-root-path
-           "erl"
-           (alchemist--server-erlang-version (alchemist-project-root-or-default-dir))
-           "/"
-           "language_server"
-           "."
-           (alchemist--server-extension))))
+  ;; '("~/src/projects/lsp-elixir.el/elixir-ls/erl19/language_server.sh")
+  '("~/dev/forks/elixir-ls/dist/language_server.sh"))
+  ;; `(,(concat alchemist-server-root-path
+  ;;          "erl"
+  ;;          (alchemist--server-erlang-version (alchemist-project-root-or-default-dir))
+  ;;          "/"
+  ;;          "language_server"
+  ;;          "."
+  ;;          (alchemist--server-extension))))
 
 
 (defun alchemist--server-erlang-version (project-path)
